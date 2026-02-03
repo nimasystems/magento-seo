@@ -118,9 +118,8 @@ final class Property implements PropertyInterface
     {
         // needed as in newer magento versions (2.4.8) this can be: http://website.com/media/catalog/product/i/m/img_6657.jpg?width=265&height=265&store=default&image-type=image
         // the query must be stripped out
-        $extension = strtolower(pathinfo($image, PATHINFO_EXTENSION)); //@codingStandardsIgnoreLine
-
         $image = parse_url($image, PHP_URL_PATH);
+
         $extension = strtolower(pathinfo($image, PATHINFO_EXTENSION)); //@codingStandardsIgnoreLine
         if (in_array($extension, $this->validImageFormats)) {
             return $this->addProperty('image', $image);
