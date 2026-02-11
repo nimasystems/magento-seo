@@ -1,5 +1,6 @@
 {
     "name": "web200/magento-seo",
+    "version": "1.99.99",
     "description": "Magento 2 Seo Module",
     "require": {
         "php": "^7.0|^8.0"
